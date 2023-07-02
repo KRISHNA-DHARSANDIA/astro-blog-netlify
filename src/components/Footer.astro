@@ -1,0 +1,14 @@
+---
+---
+
+<footer>
+  <small>
+    Copyright &copy; <span id="copyright"></span> | Made with 💖 And ☕
+  </small>
+</footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
