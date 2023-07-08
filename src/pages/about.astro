@@ -1,4 +1,8 @@
 ---
+//import Library
+import { Image } from "@astrojs/image/components";
+
+
 // component imports
 import Link from "../components/Link.astro";
 import MainLayout from "../layouts/MainLayout.astro";
@@ -6,11 +10,19 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="About" description="My About Page">
   <section class="container about" aria-label="About Me">
-    <img
+    <!-- <img
       src="/public/images/profile.jpg"
       alt="My headshort"
       width="200"
       height="330"
+    /> -->
+
+    <Image 
+      src="/public/images/profile.jpg"
+      alt="My headshort"
+      width={200}
+      height={330}
+      format="webp"
     />
 
     <div class="content">
