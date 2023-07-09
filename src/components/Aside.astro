@@ -1,0 +1,89 @@
+---
+
+
+//utils import
+import { formatBlogsPosts, slugify } from "../js/utils";
+import Icon from "astro-icon";
+
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const formatedPosts = formatBlogsPosts(allPosts);
+const allCategories = formatedPosts.map((cat) => cat.frontmatter.category);
+
+const processedCats = allCategories.reduce((acc, category) => {
+  //check if the category exists in acc
+  const value = acc[category] || 0;
+
+  return {
+    ...acc,
+    [category]: value + 1,
+  };
+}, {});
+
+const { showCount } = Astro.props;
+---
+
+<div class="aside">
+  <div class="topics">
+    <h2 class="h2">Topics</h2>
+    {
+      Object.entries(processedCats).map(([key, val]) => (
+        <a href={`/category/${slugify(key)}/`} class="topic-btn">
+          <div class="icon-box">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <p>
+            {key} {showCount && `(${val})`}
+          </p>
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="contact">
+    <h2 class="h2">Let's Talk</h2>
+
+    <div class="wrapper">
+      <p>
+        Do you want to learn more about how I can help your company overcome
+        problems? Let us have a conversation.
+      </p>
+
+      <ul class="social-link">
+        <li>
+          <a href="#" data-title="Discord" class="icon-box discord">
+            <iconify-icon icon="skill-icons:discord"></iconify-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/krishna-dharsandia-351904250/" data-title="Linkedin" class="icon-box linkedin">
+            <iconify-icon icon="skill-icons:linkedin"></iconify-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/KRISHNA-DHARSANDIA" data-title="Github" class="icon-box github">
+            <iconify-icon icon="devicon:github"></iconify-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="newsletter">
+    <h2 class="h2">Newsletter</h2>
+
+    <div class="wrapper">
+      <p>
+        Subscribe to our newsletter to be among the first to keep up with the
+        latest updates.
+      </p>
+
+      <form action="#">
+        <input type="email" name="email" placeholder="Email Address" required />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>

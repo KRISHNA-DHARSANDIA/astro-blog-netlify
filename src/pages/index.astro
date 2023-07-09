@@ -1,39 +1,81 @@
 ---
+//import Library
+import { Image } from "@astrojs/image/components";
+
 // component imports
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
+import Aside from "../components/Aside.astro";
 
 //utils import
 import { formatBlogsPosts } from "../js/utils";
+import PostCardHome from "../components/PostCardHome.astro";
 
-const allPosts = await Astro.glob("./blog/*.md"); 
 
-const formatedPosts = formatBlogsPosts(allPosts,{
-  limit:3
-});
+const allPosts = await Astro.glob("./blog/*.md");
+const formatedPosts = formatBlogsPosts(allPosts);
+
+const firstPost = formatedPosts[0];
 ---
 
-<MainLayout title="My Blog">
-  <section class="container about" aria-label="About Me">
-    <img
-      src="/public/images/profile.jpg"
-      alt="My headshort"
-      width="200"
-      height="330"
-    />
+<MainLayout title="Home Page">
+  <!--
+      - #HERO SECTION
+    -->
 
-    <div class="content">
-      <h1 class="h1">Welcome to My Blog</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, veniam
-        sit exercitationem iure magni porro enim illum consequatur ipsam sed
-        maximw.
-      </p>
-      <Link
-        href="/about/"
-        style="secondary"
-        text="👋 hello I am Krishna"
-      />
+  <div class="hero">
+    <div class="container">
+      <div class="left">
+        <h1 class="h1">
+          Hi, I'm <b>कृष्ण&nbsp;</b>.
+          <br />Web Developer
+        </h1>
+
+        <p class="h3">
+          Specialized in <abbr title="Accessibility">Webdevloper</abbr>
+          and Core Web Vitals
+        </p>
+
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary">Contact Me</a>
+          <a href="#" class="btn btn-secondary">About Me</a>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="pattern-bg"></div>
+        <div class="img-box">
+          <Image
+            src="../../public/images/profile.png"
+            alt="My headshort"
+            width={407}
+            height={407}
+            format="webp"
+            class="hero-img"
+          />
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="main">
+    <div class="container">
+      <div class="blog">
+        <h2 class="h2">Latest Blog Post</h2>
+        {
+          formatedPosts.map((post) => (
+            <PostCardHome
+              frontmatter={post.frontmatter}
+              url={post.url}
+              tagtype="h2"
+            />
+          ))
+        }
+      </div>
+      <Aside />
+    </div>
+  </div>
   </section>
 </MainLayout>

@@ -1,23 +1,36 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
-title: Building an Astro Post Tag Component
+title:  Melofi - Melofi Chill. Focus. Create
 date: 2022-12-30
 author: Anna Dixon
 image: {
-  src: "/images/post-6.jpg",
+  src: "/images/post-6.webp",
   alt: "A picture of a coder",
 }
-description: In this project, we’ll build out a custom Astro component for post tags.
+description:  I would absolutely love it if you could give Melofi a spin and share your valuable feedback" "Your input means the world to me, and it'll help me make Melofi even better. So, go ahead, dive in, and enjoy the good vibes," says Melofi.
 draft: false
 category: Astro
 ---
 
-Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
+Mel-Lofi is a free virtual instrument plugin (ROMpler) for digital audio workstations on Windows and macOS.
 
-Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate. Occaecat officia et sunt.
+This virtual instrument is based on the Mellotron multi-samples recorded by Taijiguy (+ 1 “invented” preset) and brings a total of 24 presets distributed across 5 main instrument categories.
 
-Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit excepteur excepteur ex.
+All the samples were slightly edited and most important, were looped for best playability. But even so, the sound remains rough and lo-fi, we wanted to keep the feel and sound of the original instrument.
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
+As an extra, we added 4 original effect layers: vinyl, radio noise, mechanical belt noise, and rain. They each have on/off buttons and volume sliders, also they’re labeled with their corresponding note on the keyboard.
 
-Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est. Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.
+The interface is easy to use and understand, coming with global volume & pan, a velocity knob, attack/decay envelope, cutoff filter, modulation section, and effects such as delay, chorus, distortion with cabinet, and reverb.
+
+Mel-Lofi can be used in Lo-Fi Hip Hop, Ambient, Chillout, Pop, EDM, and other similar styles. It is available in 64-bit VST/VST3 Windows and VST/VST3/AU macOS.
+
+FEATURES
+816 MB extracted size / 695 MB download size
+24 multi-sampled presets
+4 additional fx layers
+attack/release envelope
+cutoff for lowpass/highpass filters
+modulation section
+delay, chorus, distortion, cabinet & reverb
+velocity knob
+global gain and pan

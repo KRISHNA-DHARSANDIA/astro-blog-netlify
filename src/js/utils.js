@@ -23,7 +23,7 @@ export function formatBlogsPosts(posts, {
   limit = undefined,
 } = {}) {
 
-  const filteredPosts = posts.reduce((acc, post) => { 
+    const filteredPosts = posts.reduce((acc, post) => { 
 
     const {date,draft} = post.frontmatter;
 

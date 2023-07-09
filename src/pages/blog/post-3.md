@@ -1,25 +1,27 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
-title: Beginning with CSS
+title: AI is Killing Remote Work
 date: 2022-06-09
 author: Darnell McClure
 image: {
   src: "/images/post-3.jpg",
   alt: "A picture of a coder",
 }
-description: CSS is a great way to style your website. In fact, there are no alternatives! Learn how to use it here.
+description: TLDRAs white collar jobs get increasingly automated, workers will willingly go back to the office. Instead of thriving for work-life balance, we can use AI and automation to make the ‘Work-Life Integration’ concept come to life.use it here.
 draft: false
 category: CSS
 ---
 
-Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
+In 2020 and 2021, many a breathless think-piece was written about the Future of Work. The Old World was never coming back, and we all had to adapt to the reality forced upon use by COVID, or be left behind.
 
-## Well, then. Let’s talk.
+Visions tended to vary, but most agreed: Work from Home was here to stay. How could we ever go back to cubicles after a once-in-a-century plague forced us to take stock of work-life-balance’s importance? 
 
-Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate. Occaecat officia et sunt.
+Oh how we were wrong. Amazon, Goldman Sachs, Disney, Dell… so many companies have asked employees to come back to the office over the past months that it may be easier to name the ones that haven’t done so (Airbnb? Coinbase?).
 
-Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit excepteur excepteur ex.
+Employees have fought back, but the fight is not long for this world. They will all come back of their own volition. And the rise of General Artificial Intelligence is at fault.
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
+As we witness AI becoming proficient in the ways of mundane corporate work (making presentations, helping clients, generating financial reports…), we get more anxious about our replace-ability. We ask ourselves “What can I do that can’t be automated?” “How can I make sure I come out on top of this technological revolution?”
 
-Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est. Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.
+Sure, we crack jokes with our colleagues about the mistakes ChatGPT makes. We write sarcastic little Tweets saying “our jobs are safe, fam”. But we’re all asking these same questions. We’re scared. 
+
+The smartest among us will have realized that the talents still unique to humanity are interpersonal and best exercised in-person. Collaboration. Leadership. Creativity. Brainstorming. All matters of soft skills. In fact, work that can’t be automated is the personality you bring to the office. No amount of technology seems to be able to replace this… because it can only happen organically.  
