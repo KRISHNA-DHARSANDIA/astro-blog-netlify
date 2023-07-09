@@ -32,6 +32,12 @@
 
   --accent: hsl(229, 76%, 66%);
 
+  --muted--light: var(--_hue) 30% 99%;
+  --muted: var(--muted--light);
+
+
+  --txt--light: var(--_hue) 60% 8%;
+
 }
 
 .dark-theme {
@@ -52,9 +58,43 @@
 
   --accent: hsl(229, 76%, 66%);
 
+  --muted--dark: var(--_hue) 20% 2%;
+  --muted: var(--muted--dark);
+
+
+  --txt--dark: var(--_hue) 20% 85%;
+
 }
 
 :root {
+
+  --_hue: 235;
+  --space-md: clamp(1.13rem, calc(0.80rem + 1.63vw), 2.06rem);
+  --radius-md: 0.4em;
+  --txt: var(--txt--light);
+
+  /* shadows adapted from https: //www.joshwcomeau.com/shadow-palette/ */
+  --_shadow-strength: .25;
+  --_shadow-saturation: 30%;
+  --_shadow-lightness: 69%;
+  --_shadow: var(--_hue) var(--_shadow-saturation) var(--_shadow-lightness);
+  --shadow-sm:
+    0.2px 0.5px 0.6px hsl(var(--_shadow) / var(--_shadow-strength)),
+    0.3px 0.8px 1px -1.2px hsl(var(--_shadow) / var(--_shadow-strength)),
+    0.8px 1.9px 2.3px -2.5px hsl(var(--_shadow) / var(--_shadow-strength));
+
+
+
+    /* dynamic spacing adapted from utopia.fyi */
+    --space-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
+    --space-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
+    --space-sm: clamp(0.88rem, calc(0.70rem + 0.87vw), 1.38rem);
+    --space-md: clamp(1.13rem, calc(0.80rem + 1.63vw), 2.06rem);
+    --space-lg: clamp(1.69rem, calc(1.32rem + 1.85vw), 2.75rem);
+    --space-xl: clamp(2.25rem, calc(1.60rem + 3.26vw), 4.13rem);
+    --space-2xl: clamp(3.38rem, calc(2.64rem + 3.70vw), 5.50rem);
+    --space-3xl: clamp(4.50rem, calc(3.20rem + 6.52vw), 8.25rem);
+
 
   /**
    * color
@@ -78,6 +118,9 @@
    */
 
   --py: 5rem;
+
+
+
 
 }
 
@@ -1145,26 +1188,29 @@ footer .wrapper {
     opacity: 1;
     transition: all 0.1s ease 0.5s;
     visibility: visible;
-}
-[data-title]:after {
+  }
+
+  [data-title]:after {
     content: attr(data-title);
     background-color: white;
     padding: 5px 10px 5px 10px;
     color: #111;
-    font-size: 50%;
+    font-size: 40%;
     position: absolute;
     bottom: -2.8em;
     white-space: nowrap;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    ;
     opacity: 0;
     border: 1px solid white;
     border-radius: 10px;
     z-index: 99999;
     visibility: hidden;
-}
-[data-title] {
+  }
+
+  [data-title] {
     position: relative;
-}
+  }
 
   .newsletter {
     position: sticky;
@@ -1218,4 +1264,120 @@ footer .wrapper {
     margin-bottom: 0.3rem;
   }
 
+}
+
+
+/* cards */
+.card {
+  display: grid;
+  background-color: hsl(var(--muted));
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-md);
+
+  & .badge {
+    --accent: var(--txt);
+  }
+
+  & [aria-hidden="true"] {
+    margin-inline: calc(var(--space-md) * -1);
+    margin-block: var(--space-md);
+  }
+
+  & img {
+    box-shadow: var(--shadow-sm);
+    object-fit: cover;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & .content {
+    display: grid;
+    gap: var(--space-xs);
+  }
+}
+
+
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.container-post {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding: var(--space-sm);
+}
+
+
+.post-header
+{
+  display: grid;
+  place-items: center;
+  margin:1% 10%;
+  text-align: center;
+
+  & .container-post {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-block: var(--space-lg) var(--space-sm);
+  }
+}
+
+
+.content-data
+{
+  display: grid;
+  margin:1% 10%;
+}
+
+/* category cloud */
+.categories {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  & li {
+    display: grid;
+    place-items: center;
+  }
+}
+
+
+[aria-label="Blog categories"], [aria-label="Related posts"] {
+  padding: 0;
+  text-align: center;
+  display: grid;
+  gap: var(--space-sm);
+  justify-items: center;
+
+  & .post {
+    background-color: hsl(var(--muted));
+    padding: var(--space-xs);
+    gap: var(--space-2xs);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    width: fit-content;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+[aria-label="Blog pages"] {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
 }

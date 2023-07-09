@@ -9,10 +9,10 @@ import { slugify,formatDate } from "../js/utils";
 const { title, author, date, category, image } = Astro.props;
 ---
 
-<header>
-    <div class="container">
+<div class="post-header">
+    <div class="container-post">
       <small>
-        <a href={`/category/${slugify(category)}/`} class="badge">{category}</a>
+        <a href={`/category/${slugify(category)}/`} class="blog-topic text-tiny">{category}</a>
       </small>
       <h1 class="h2">{title}</h1>
       <p>
@@ -24,7 +24,7 @@ const { title, author, date, category, image } = Astro.props;
     </div>
     <Image src={image.src} 
            alt={image.alt} 
-           width={1200}
+           width={1100}
            height={600}
             format='avif'
             fit="cover"

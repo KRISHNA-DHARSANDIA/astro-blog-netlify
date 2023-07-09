@@ -10,15 +10,14 @@ const { prevUrl, nextUrl } = Astro.props;
   {
     prevUrl && (
       <Link
-        text="Previous"
         href={prevUrl}
-        style="primary"
         borderVisible={true}
         isFilled={true}
         icon={{
           name: "tabler:arrow-big-left-line",
           side: "left",
         }}
+        classes="blog-topic text-tiny"
       />
     )
   }
@@ -26,7 +25,6 @@ const { prevUrl, nextUrl } = Astro.props;
   {
     nextUrl && (
       <Link
-        text="Next"
         href={nextUrl}
         style="primary"
         borderVisible={true}
@@ -35,6 +33,7 @@ const { prevUrl, nextUrl } = Astro.props;
           name: "tabler:arrow-big-right-line",
           side: "right",
         }}
+        classes="blog-topic text-tiny"
       />
     )
   }
