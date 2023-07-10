@@ -10,8 +10,6 @@ const { frontmatter, url, tagtype } = Astro.props;
 const Tag = tagtype;
 
 const { title, description, author, date, category, image } = frontmatter;
-
-const authoreimg = "../../public/images/author.jpg";
 ---
 
 <div class="blog-card-group">
@@ -45,8 +43,9 @@ const authoreimg = "../../public/images/author.jpg";
       <div class="wrapper-flex">
         <div class="profile-wrapper">
           <Image
-          src = {authoreimg}
-          alt="hero"
+          src = {import('../../public/images/author.jpg')}
+          alt="author img"
+          format="webp"
           width={50}
           height={50}
         />
