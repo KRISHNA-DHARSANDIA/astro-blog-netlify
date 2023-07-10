@@ -15,8 +15,6 @@ import PostCardHome from "../components/PostCardHome.astro";
 const allPosts = await Astro.glob("./blog/*.md");
 const formatedPosts = formatBlogsPosts(allPosts);
 
-
-const ProfileImg = "../../public/images/profile.png";
 ---
 
 <MainLayout title="Home Page">
@@ -47,7 +45,7 @@ const ProfileImg = "../../public/images/profile.png";
         <div class="pattern-bg"></div>
         <div class="img-box">
           <Image
-            src = {ProfileImg}
+            src = {import('../../public/images/profile.png') }
             alt="hero"
             width={407}
             height={407}
