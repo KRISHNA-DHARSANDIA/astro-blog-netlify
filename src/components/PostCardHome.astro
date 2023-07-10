@@ -2,9 +2,6 @@
 //import Library
 import { Image } from "@astrojs/image/components";
 
-//import component
-import Link from "./Link.astro";
-
 //utils import
 import { slugify, formatDate } from "../js/utils";
 
@@ -13,6 +10,8 @@ const { frontmatter, url, tagtype } = Astro.props;
 const Tag = tagtype;
 
 const { title, description, author, date, category, image } = frontmatter;
+
+const authoreimg = "../../public/images/author.jpg";
 ---
 
 <div class="blog-card-group">
@@ -45,7 +44,12 @@ const { title, description, author, date, category, image } = frontmatter;
 
       <div class="wrapper-flex">
         <div class="profile-wrapper">
-          <img src="../../public/images/author.jpg" alt={author} width="55" />
+          <Image
+          src = {authoreimg}
+          alt="hero"
+          width={50}
+          height={50}
+        />
         </div>
         <div class="wrapper">
           <a href="{`/author/${slugify(author)}/`}" class="h4">{author}</a>
