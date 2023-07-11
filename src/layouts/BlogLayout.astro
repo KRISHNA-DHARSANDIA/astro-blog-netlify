@@ -24,28 +24,30 @@ const relatedPosts = formatedPosts
   )
   .slice(0, 3);
 ---
-
+<div class="My-Blog-Main">
 <MainLayout {title} {description}>
-  <PostHeader {title} {author} {date} {category} {image} />
+  
+    <PostHeader {title} {author} {date} {category} {image} />
 
-  <div class="post-content">
-    <div class="content-data">
-      <slot />
-    </div>
-    <div class="siderbar">
-      <div class="container">
-        <aside class="container" aria-label="Blog categories">
-          <h2 class="h3">Blog Categories</h2>
-          <CategoryCloud />
-        </aside>
-        {
-          relatedPosts.length > 0 && (
-            <aside class="container" aria-label="Blog categories">
-              <h2 class="h3">Related Blogs</h2>
-              <RelatedPosts {relatedPosts} />
-            </aside>
-          )
-        }
+    <div class="post-content">
+      <div class="content-data">
+        <slot />
+      </div>
+      <div class="siderbar">
+        <div class="container">
+          <aside class="container" aria-label="Blog categories">
+            <h2 class="h3">Blog Categories</h2>
+            <CategoryCloud />
+          </aside>
+          {
+            relatedPosts.length > 0 && (
+              <aside class="container" aria-label="Blog categories">
+                <h2 class="h3">Related Blogs</h2>
+                <RelatedPosts {relatedPosts} />
+              </aside>
+            )
+          }
+        </div>
       </div>
     </div>
   </div>

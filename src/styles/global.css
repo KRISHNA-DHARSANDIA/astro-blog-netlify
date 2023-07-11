@@ -58,8 +58,8 @@
 
   --accent: hsl(229, 76%, 66%);
 
-  --muted--dark: var(--_hue) 20% 2%;
-  --muted: var(--muted--dark);
+  --muted--dark: hsl(220, 26%, 14%);
+  --muted: hsl(220, 26%, 14%);
 
 
   --txt--dark: var(--_hue) 20% 85%;
@@ -493,6 +493,16 @@ header .btn-group {
 .main {
   background: var(--background-secondary);
   padding: var(--py) 0;
+}
+
+.My-Blog-Main
+{
+  background: var(--background-secondary);
+}
+
+.My-Blog-Main a,p,small
+{
+  color: var(--foreground-primary);
 }
 
 .blog .h2 {
@@ -1270,7 +1280,7 @@ footer .wrapper {
 /* cards */
 .card {
   display: grid;
-  background-color: hsl(var(--muted));
+  background-color: var(--background-primary);
   padding: var(--space-md);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);

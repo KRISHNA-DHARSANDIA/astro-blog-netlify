@@ -27,26 +27,24 @@ const {
 } = Astro.props as Props;
 ---
 
-<a
-  href={href}
-  class:list={[
-    classes,
-    style,
-    { filled: isFilled, bordered: borderVisible },
-  ]}
-  {...rest}
->
-{
-  icon && icon.side === "left" && (
-    <Icon name={icon.name} height="24" width="24" />
-  )
-}
+<li class="nav-item">
+  <a
+    href={href}
+    class:list={[classes, style, { filled: isFilled, bordered: borderVisible }]}
+    {...rest}
+  >
+    {
+      icon && icon.side === "left" && (
+        <Icon name={icon.name} height="24" width="24" />
+      )
+    }
 
-<span>{text}</span>
+    <span>{text}</span>
 
-{
-  icon && icon.side === "right" && (
-    <Icon name={icon.name} height="24" width="24" />
-  )
-}
-</a>
+    {
+      icon && icon.side === "right" && (
+        <Icon name={icon.name} height="24" width="24" />
+      )
+    }
+  </a>
+</li>

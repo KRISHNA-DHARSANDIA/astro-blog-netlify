@@ -7,52 +7,68 @@ import Link from "./Link.astro";
 
 // data imports
 import navData from "../data/navData";
-
-
 ---
 
-<!-- <nav aria-label="Primary">
-  <div class="navbar">
-    <a href="/" class="logomark" aria-label="Go home">
-      <Icon name="logomark" width="50" />
-    </a>
-    <ul>
-      {
-        navData.map((item) => (
-          <Link
-            text={item.name}
-            href={item.path}
-            style="primary"
-            isFilled={false}
-            data-navLink
-          />
-        ))
-      }
-    </ul>
-  </div>
-</nav> -->
-
 <header>
-
   <div class="container">
-
     <nav class="navbar">
-
       <a href="/">
-        <Icon name="logo-light" width="60" class="logo-light" />
+        <Icon name="logo-light" width="50" class="logo-light" />
+        <Icon name="logo-light" width="50" class="logo-dark" />
       </a>
-      
-      <div class="btn-group">
 
-        <button class="nav-menu-btn">
-          <ion-icon name="menu-outline"></ion-icon>
+      <!-- <div class="btn-group">
+        <button class="theme-btn theme-btn-mobile light">
+            <iconify-icon icon="akar-icons:moon-fill" class="moon" name="moon"></iconify-icon>
+            <iconify-icon icon="humbleicons:sun" class="sun" name="sun"></iconify-icon>
         </button>
 
+        <button class="nav-menu-btn">
+          <iconify-icon icon="ion:menu"></iconify-icon>
+        </button>
+      </div> -->
+
+      <div class="btn-group">
+        <!-- <button class="theme-btn theme-btn-mobile light">
+          <ion-icon name="moon" class="moon"></ion-icon>
+          <ion-icon name="sunny" class="sun"></ion-icon>
+        </button> -->
+
+        <button class="nav-menu-btn">
+          <iconify-icon icon="ion:menu"></iconify-icon>
+        </button>
       </div>
 
       <div class="flex-wrapper">
-
         <ul class="desktop-nav">
+          {
+            navData.map((item) => (
+              <Link
+                text={item.name}
+                href={item.path}
+                classes="nav-link"
+                isFilled={false}
+                data-navLink
+              />
+            ))
+          }
+        </ul>
+
+        <button class="theme-btn theme-btn-desktop light">
+          <iconify-icon icon="humbleicons:sun"></iconify-icon>
+          <iconify-icon icon="akar-icons:moon-fill"></iconify-icon>
+        </button>
+      </div>
+
+      <div class="mobile-nav">
+        <button class="nav-close-btn">
+          <iconify-icon icon="iconamoon:close-bold"></iconify-icon>
+        </button>
+
+        <div class="wrapper">
+          <p class="h3 nav-title">Main Menu</p>
+
+          <ul>
             {
               navData.map((item) => (
                 <Link
@@ -64,45 +80,13 @@ import navData from "../data/navData";
                 />
               ))
             }
-        </ul>
-
-        <button class="theme-btn theme-btn-desktop light">
-          <ion-icon name="moon" class="moon"></ion-icon>
-          <ion-icon name="sunny" class="sun"></ion-icon>
-        </button>
-      </div>
-
-      <div class="mobile-nav">
-
-        <button class="nav-close-btn">
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <div class="wrapper">
-
-          <p class="h3 nav-title">Main Menu</p>
-
-          <ul>
-            {
-              navData.map((item) => (
-                <Link
-                  text={item.name}
-                  href={item.path}
-                  style="primary"
-                  isFilled={false}
-                  data-navLink
-                />
-              ))
-            } 
           </ul>
-
         </div>
 
-        <div>
+        <!-- <div>
+          <p class="h3 nav-title">Topics</p>
 
-          <!-- <p class="h3 nav-title">Topics</p> -->
-
-          <!-- <ul>
+          <ul>
             <li class="nav-item">
               <a href="#" class="nav-link">Database</a>
             </li>
@@ -114,18 +98,12 @@ import navData from "../data/navData";
             <li class="nav-item">
               <a href="#" class="nav-link">Web Performance</a>
             </li>
-          </ul> -->
-
-        </div>
-
+          </ul>
+        </div> -->
       </div>
-
     </nav>
-
   </div>
-
 </header>
-
 
 <script>
   import "../js/nav.js";

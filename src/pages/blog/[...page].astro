@@ -18,28 +18,29 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-
 ---
 
 <MainLayout title="My Blog">
-  <section class="container" aria-label="New Blog Post">
-    <h1 class="h1">New Blog Post</h1>
-    <div class="post-container">
-      {
-        page.data.map((post) => (
-          <PostCard
-            frontmatter={post.frontmatter}
-            url={post.url}
-            tagtype="h2"
-          />
-        ))
-      }
-    </div>
+  <div class="My-Blog-Main">
+    <section class="container" aria-label="New Blog Post">
+      <h1 class="h1">New Blog Post</h1>
+      <div class="post-container">
+        {
+          page.data.map((post) => (
+            <PostCard
+              frontmatter={post.frontmatter}
+              url={post.url}
+              tagtype="h2"
+            />
+          ))
+        }
+      </div>
 
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-  </section>
-  <aside class="container" aria-label="Blog categories">
-    <h2 class="h3">Blog Categories</h2>
-   <CategoryCloud showCount={true}> </CategoryCloud>
-  </aside>
+      <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    </section>
+    <aside class="container" aria-label="Blog categories">
+      <h2 class="h3">Blog Categories</h2>
+      <CategoryCloud showCount={true} />
+    </aside>
+  </div>
 </MainLayout>
