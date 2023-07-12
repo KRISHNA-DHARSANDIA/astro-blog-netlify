@@ -85,15 +85,15 @@
 
 
 
-    /* dynamic spacing adapted from utopia.fyi */
-    --space-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
-    --space-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
-    --space-sm: clamp(0.88rem, calc(0.70rem + 0.87vw), 1.38rem);
-    --space-md: clamp(1.13rem, calc(0.80rem + 1.63vw), 2.06rem);
-    --space-lg: clamp(1.69rem, calc(1.32rem + 1.85vw), 2.75rem);
-    --space-xl: clamp(2.25rem, calc(1.60rem + 3.26vw), 4.13rem);
-    --space-2xl: clamp(3.38rem, calc(2.64rem + 3.70vw), 5.50rem);
-    --space-3xl: clamp(4.50rem, calc(3.20rem + 6.52vw), 8.25rem);
+  /* dynamic spacing adapted from utopia.fyi */
+  --space-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
+  --space-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
+  --space-sm: clamp(0.88rem, calc(0.70rem + 0.87vw), 1.38rem);
+  --space-md: clamp(1.13rem, calc(0.80rem + 1.63vw), 2.06rem);
+  --space-lg: clamp(1.69rem, calc(1.32rem + 1.85vw), 2.75rem);
+  --space-xl: clamp(2.25rem, calc(1.60rem + 3.26vw), 4.13rem);
+  --space-2xl: clamp(3.38rem, calc(2.64rem + 3.70vw), 5.50rem);
+  --space-3xl: clamp(4.50rem, calc(3.20rem + 6.52vw), 8.25rem);
 
 
   /**
@@ -495,13 +495,13 @@ header .btn-group {
   padding: var(--py) 0;
 }
 
-.My-Blog-Main
-{
+.My-Blog-Main {
   background: var(--background-secondary);
 }
 
-.My-Blog-Main a,p,small
-{
+.My-Blog-Main a,
+p,
+small {
   color: var(--foreground-primary);
 }
 
@@ -630,8 +630,6 @@ header .btn-group {
 
 
 
-
-
 /*-----------------------------------*\ 
   #FOOTER
 \*-----------------------------------*/
@@ -640,63 +638,12 @@ footer {
   background: var(--background-primary);
 }
 
-footer .container {
-  padding: var(--py) 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
-footer .wrapper {
-  text-align: center;
-}
-
-.footer-logo {
-  margin-bottom: 10px;
-}
-
-.footer-text {
-  color: var(--foreground-secondary);
-  max-width: 300px;
-  margin-inline: auto;
-  margin: auto;
-  /* fallback for margin-inline */
-}
-
-.footer-title {
-  color: var(--foreground-primary);
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.footer-link {
-  color: var(--foreground-secondary);
-}
-
-.footer-link:hover {
-  color: var(--accent);
-}
-
 .copyright {
   color: var(--foreground-secondary);
   font-size: var(--fs-4);
   text-align: center;
   padding: 1rem;
-  border-top: 1px solid var(--action-primary);
 }
-
-.copyright a {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.copyright a:hover {
-  text-decoration: underline;
-}
-
-
-
-
 
 /*-----------------------------------*\ 
   #MEDIA QUERIES
@@ -845,25 +792,6 @@ footer .wrapper {
     flex-direction: column;
     align-items: start;
     gap: 0;
-  }
-
-
-
-  /**
-   * FOOTER 
-   */
-
-  footer .container {
-    padding: var(--py) 30px;
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-
-  footer .wrapper {
-    text-align: left;
-  }
-
-  .footer-text {
-    margin: 0;
   }
 
 }
@@ -1260,20 +1188,6 @@ footer .wrapper {
     /* fallback for margin-inline */
   }
 
-
-
-  /**
-   * FOOTER 
-   */
-
-  .footer-title {
-    font-size: 1.125rem;
-  }
-
-  .footer-link {
-    margin-bottom: 0.3rem;
-  }
-
 }
 
 
@@ -1326,11 +1240,10 @@ picture {
 }
 
 
-.post-header
-{
+.post-header {
   display: grid;
   place-items: center;
-  margin:1% 10%;
+  margin: 1% 10%;
   text-align: center;
 
   & .container-post {
@@ -1342,10 +1255,9 @@ picture {
 }
 
 
-.content-data
-{
+.content-data {
   display: grid;
-  margin:1% 10%;
+  margin: 1% 10%;
 }
 
 /* category cloud */
@@ -1365,7 +1277,8 @@ picture {
 }
 
 
-[aria-label="Blog categories"], [aria-label="Related posts"] {
+[aria-label="Blog categories"],
+[aria-label="Related posts"] {
   padding: 0;
   text-align: center;
   display: grid;
@@ -1390,4 +1303,9 @@ picture {
   display: flex;
   gap: var(--space-sm);
   justify-content: center;
+}
+
+.container-404
+{
+  height: 36.1em;
 }

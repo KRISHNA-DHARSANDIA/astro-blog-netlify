@@ -43,6 +43,7 @@ const { name,posts } = Astro.props;
 ---
 
 <MainLayout title={name}>
+ 
     <section class="container" aria-label=`Post about ${name}`>
       <h1 class="h1">Post about <span>{name}</span></h1>
       <div class="post-container"> 
@@ -57,5 +58,6 @@ const { name,posts } = Astro.props;
         }
       </div>
     </section>
+ 
   </MainLayout>
   

@@ -5,26 +5,24 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Page Not Found">
-    <div class="container"
+    <div class="container-404" 
         style={{
             display:"grid",
             placeItems:"center",
             textAlign:"center",
             gap:"var(--space-sm)"
         }}>
-
         <div>
             <h1 class="h1">Welp, this is awkward!</h1>
             <p>We seem to have misplaced something</p>
+            <Link 
+            href="/"
+            style="secondary"
+            text="Go Home"
+            icon={{
+                name:"tabler:home",
+                side:"right",
+            }}/>
         </div>
-        <Link 
-        href="/"
-        style="secondary"
-        text="Go Home"
-        icon={{
-            name:"tabler:home",
-            side:"right",
-        }}/>
-        
     </div>
 </MainLayout>

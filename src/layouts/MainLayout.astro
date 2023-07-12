@@ -19,10 +19,12 @@ const theamchanger = "dark-theme";
   <MainHead {title} {description} />
   <body class={theamchanger}>
     <Nav />
-    <main >
-      <slot> Default Text</slot>
-    </main>
-    <Footer />
+    <div class="My-Blog-Main">
+      <main>
+        <slot> Default Text</slot>
+      </main>
+      <Footer />
+    </div>
     <script>
       // navbar variables
       const nav = document.querySelector(".mobile-nav");
