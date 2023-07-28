@@ -26,35 +26,75 @@ const theamchanger = "dark-theme";
       <Footer />
     </div>
     <script>
-      // navbar variables
-      const nav = document.querySelector(".mobile-nav");
-      const navMenuBtn = document.querySelector(".nav-menu-btn");
-      const navCloseBtn = document.querySelector(".nav-close-btn");
+      // // navbar variables
+      // const nav = document.querySelector(".mobile-nav");
+      // const navMenuBtn = document.querySelector(".nav-menu-btn");
+      // const navCloseBtn = document.querySelector(".nav-close-btn");
 
-      // navToggle function
-      const navToggleFunc = function () {
-        nav.classList.toggle("active");
-      };
+      // // navToggle function
+      // const navToggleFunc = function () {
+      //   nav.classList.toggle("active");
+      // };
 
-      navMenuBtn.addEventListener("click", navToggleFunc);
-      navCloseBtn.addEventListener("click", navToggleFunc);
+      // navMenuBtn.addEventListener("click", navToggleFunc);
+      // navCloseBtn.addEventListener("click", navToggleFunc);
+
+      // // theme toggle variables
+      // const themeBtn = document.querySelectorAll(".theme-btn");
+
+      // for (let i = 0; i < themeBtn.length; i++) {
+      //   themeBtn[i].addEventListener("click", function () {
+      //     // toggle `light-theme` & `dark-theme` class from `body`
+      //     // when clicked `theme-btn`
+
+      //     document.body.classList.toggle("light-theme");
+      //     document.body.classList.toggle("dark-theme");
+
+      //     for (let i = 0; i < themeBtn.length; i++) {
+      //       // When the `theme-btn` is clicked,
+      //       // it toggles classes between `light` & `dark` for all `theme-btn`.
+      //       themeBtn[i].classList.toggle("light");
+      //       themeBtn[i].classList.toggle("dark");
+      //     }
+      //   });
+      // }
+
+      // Function to set the theme class on the <body> element
+      function setTheme(theme) {
+        document.body.className = theme;
+
+        for (let i = 0; i < themeBtn.length; i++) {
+          // When the `theme-btn` is clicked,
+          // it toggles classes between `light` & `dark` for all `theme-btn`.
+          themeBtn[i].classList.toggle("light");
+          themeBtn[i].classList.toggle("dark");
+        }
+      }
 
       // theme toggle variables
       const themeBtn = document.querySelectorAll(".theme-btn");
+
+      var http = require("http");
+      var Cookies = require("cookies");
+
+      // Optionally define keys to sign cookie values
+      // to prevent client tampering
 
       for (let i = 0; i < themeBtn.length; i++) {
         themeBtn[i].addEventListener("click", function () {
           // toggle `light-theme` & `dark-theme` class from `body`
           // when clicked `theme-btn`
-          document.body.classList.toggle("light-theme");
-          document.body.classList.toggle("dark-theme");
 
-          for (let i = 0; i < themeBtn.length; i++) {
-            // When the `theme-btn` is clicked,
-            // it toggles classes between `light` & `dark` for all `theme-btn`.
-            themeBtn[i].classList.toggle("light");
-            themeBtn[i].classList.toggle("dark");
-          }
+          var server = http.createServer(function (req, res) {
+            // Create a cookies object
+            var cookies = new Cookies(req, res);
+
+            cookies.set(theamchanger, "dark-theme");
+
+            const currentTheme = theamchanger;
+            const newTheme = currentTheme === "dark-theme" ? "light-theme" : "dark-theme";
+            setTheme(newTheme);
+          });
         });
       }
     </script>

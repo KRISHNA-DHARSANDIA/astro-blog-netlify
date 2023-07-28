@@ -9,13 +9,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="About" description="My About Page">
-  <section class="container about" aria-label="About Me">
+  <!-- <section class="container about" aria-label="About Me">
  
     <Image 
-      src="/public/images/profile.jpg"
+      src={import('../../public/images/profile.png') }
       alt="My headshort"
-      width={200}
-      height={330}
+      width={100}
+      height={300}
       format="avif"
     />
 
@@ -35,5 +35,20 @@ import MainLayout from "../layouts/MainLayout.astro";
         text="Content Me"
       />
     </div>
+  </section> -->
+
+  <section class="about-us">
+    <div class="about">
+   <!-- <img src="../../public/images/profile.png" class="pic"> -->
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>Front-end Developer & <span>Designer</span></h5>
+        <p>"Hello, my name is <span>Krishna Dharsandia</span>, and I am an aspiring computer engineer. I am highly enthusiastic about technology and have always been fascinated by how it can be utilized to solve complex problems. Throughout my academic journey, I have developed a strong foundation in computer engineering principles, including areas such as programming, algorithms, and hardware design.</p>
+        <div class="data">
+        <a href="../../public/images/Krishna_Resume-1.pdf" download="Krishna_Resume-1" class="resume">Resume</a>
+        </div>
+      </div>
+    </div>
   </section>
+
 </MainLayout>
