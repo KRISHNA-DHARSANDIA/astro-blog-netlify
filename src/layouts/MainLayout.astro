@@ -3,7 +3,7 @@
 import MainHead from "./MainHead.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
-import "../js/app"
+
 
 // style import
 import "../styles/global.css";
@@ -42,49 +42,9 @@ const theamchanger = "dark-theme";
    navMenuBtn.addEventListener("click", navToggleFunc);
    navCloseBtn.addEventListener("click", navToggleFunc);
 
-   // theme toggle variables
-   const themeBtn = document.querySelector(".theme-btn");
-   let darkMode = localStorage.getItem("dark-mode");
-
-   const enableDarkMode = () => {
-     document.body.classList.remove("light-theme");
-     document.body.classList.add("dark-theme");
-
-     themeBtn.classList.remove("light");
-     themeBtn.classList.add("dark");
-
-     localStorage.setItem("dark-mode", "enabled");
-   };
-
-   const disableDarkMode = () => {
-     document.body.classList.remove("dark-theme");
-     document.body.classList.add("light-theme");
-
-     themeBtn.classList.remove("dark");
-     themeBtn.classList.add("light");
-
-     localStorage.setItem("dark-mode", "disabled");
-   };
-
-  
-   themeBtn.addEventListener("click", (e) => {
-
-       darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
-       
-       if (darkMode === "disabled") 
-       {
-         enableDarkMode();
-       } 
-       else
-       {
-         disableDarkMode();
-       }
-
-         
-         
-       
-     });
    
-  </script>
+   
+   
+  </script> 
 
 </html>

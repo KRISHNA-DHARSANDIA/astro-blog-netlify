@@ -21,6 +21,11 @@
     "cookies": "^0.8.0",
     "postcss": "^8.4.24",
     "postcss-preset-env": "^8.5.1",
+    "preact": "^10.16.0",
     "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "@astrojs/preact": "^2.2.1",
+    "@astrojs/tailwind": "^4.0.0"
   }
 }

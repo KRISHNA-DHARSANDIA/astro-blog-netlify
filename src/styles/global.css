@@ -2,19 +2,12 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 @codewithsadee 
- */
-
-
-
-
 
 /*-----------------------------------*\ 
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
-.light-theme {
+[data-theme="light"] {
 
   /**
    * light theme colors 
@@ -40,7 +33,7 @@
 
 }
 
-.dark-theme {
+[data-theme="dark"] {
 
   /**
    * dark theme colors 
@@ -390,9 +383,7 @@ header .btn-group {
   color: var(--white);
 }
 
-.theme-btn-mobile ion-icon {
-  display: none;
-}
+
 
 .theme-btn-mobile.light .sun,
 .theme-btn-mobile.dark .moon {
@@ -1443,5 +1434,7 @@ picture {
   box-shadow: 0px 2px 10px 0px rgba(58, 53, 65, 0.1);
   position: relative;
 }
+
+
 
 

@@ -7,9 +7,15 @@ import Link from "./Link.astro";
 
 // data imports
 import navData from "../data/navData";
+
+//Component Import
+import Toggle from "../components/ThemeChange.astro"; 
+
+
 ---
 
 <header>
+  
   <div class="container">
     <nav class="navbar">
       <a href="/">
@@ -54,10 +60,13 @@ import navData from "../data/navData";
           }
         </ul>
 
-        <button class="theme-btn theme-btn-desktop light">
+        <!-- <button class="theme-btn theme-btn-desktop light">
           <iconify-icon icon="humbleicons:sun"></iconify-icon>
           <iconify-icon icon="akar-icons:moon-fill"></iconify-icon>
-        </button>
+        </button> -->
+
+        <Toggle />
+
       </div>
 
       <div class="mobile-nav">
