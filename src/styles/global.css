@@ -350,14 +350,9 @@ header .flex-wrapper {
 
 .logo-light,
 .logo-dark {
-  display: none;
-}
-
-.light-theme .logo-light,
-.dark-theme .logo-dark {
   display: block;
 }
-
+y
 header .btn-group {
   display: flex;
   align-items: center;

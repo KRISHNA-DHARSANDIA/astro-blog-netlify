@@ -1,6 +1,9 @@
+---
+---
+
 <div class="theme-switch-wrapper">
   <label class="theme-switch" for="checkbox">
-    <input type="checkbox" id="checkbox" style="display: none;">
+    <input type="checkbox" id="checkbox" style="display: none;" />
     <div class="slider theme-btn theme-btn-desktop light">
       <iconify-icon icon="humbleicons:sun"></iconify-icon>
       <iconify-icon icon="akar-icons:moon-fill"></iconify-icon>
@@ -8,42 +11,56 @@
   </label>
 </div>
 
-<script>
-  // Get the theme toggle input
-  const themeToggle = document.querySelector('.theme-switch input[type="checkbox"]');
 
-  // Get the current theme from local storage
-  const currentTheme = localStorage.getItem("theme");
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
 
   const themeBtn = document.querySelector(".theme-btn");
 
-  // If the current local storage item can be found
-  if (currentTheme) {
-    // Set the body data-theme attribute to match the local storage item
-    document.documentElement.setAttribute("data-theme", currentTheme);
-    themeBtn.classList.add(currentTheme);
-    // If the current theme is dark, check the theme toggle
-    if (currentTheme === "dark") {
-      themeToggle.checked = true;
-    }
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    themeBtn.classList.remove("dark");
+    themeBtn.classList.add("light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    themeBtn.classList.remove("light");
+    themeBtn.classList.add("dark");
   }
 
-  // Function that will switch the theme based on the if the theme toggle is checked or not
-  function switchTheme(e) {
-    if (e.target.checked) {
+  window.localStorage.setItem("theme", theme);
+
+  const handleToggleClick = () => {
+
+    // themeBtn.classList.toggle("dark");
+
+    if(localStorage.getItem("theme") == "light")
+    {
       document.documentElement.setAttribute("data-theme", "dark");
       themeBtn.classList.remove("light");
       themeBtn.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
+    }
+
+    if(localStorage.getItem("theme") == "dark")
+    {
       document.documentElement.setAttribute("data-theme", "light");
       themeBtn.classList.remove("dark");
       themeBtn.classList.add("light");
-      localStorage.setItem("theme", "light");
     }
-  }
 
-  // Add an event listener to the theme toggle, which will switch the theme
-  themeToggle.addEventListener("change", switchTheme);
 
+    const isDark = themeBtn.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+   
+  };
+
+  document.getElementById("checkbox").addEventListener("click", handleToggleClick);
 </script>
