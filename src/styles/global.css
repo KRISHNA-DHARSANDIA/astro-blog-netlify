@@ -437,7 +437,10 @@ header .btn-group {
   color: var(--accent);
 }
 
-
+.nav-item
+{
+  color: aqua;
+}
 
 
 
@@ -481,7 +484,11 @@ header .btn-group {
 
 
 
-
+.hero-image
+{
+  width: 100%;
+  height: 90%;
+}
 
 /*-----------------------------------*\ 
   #BLOG SECTION
