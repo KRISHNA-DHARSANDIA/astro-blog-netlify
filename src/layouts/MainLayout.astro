@@ -14,6 +14,7 @@ const {
 } = Astro.props;
 
 const theamchanger = "dark-theme";
+
 ---
 
 <html lang="en">
@@ -43,7 +44,7 @@ const theamchanger = "dark-theme";
    navCloseBtn.addEventListener("click", navToggleFunc);
 
    
-   
+   localStorage.setItem("theme", "dark");
    
   </script> 
 
