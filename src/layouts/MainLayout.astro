@@ -13,13 +13,12 @@ const {
   description = "My musings about the Astro framework",
 } = Astro.props;
 
-const theamchanger = "dark-theme";
 
 ---
 
 <html lang="en">
   <MainHead {title} {description} />
-  <body class={theamchanger}>
+  <body>
     <Nav />
     <div class="My-Blog-Main">
       <main>
