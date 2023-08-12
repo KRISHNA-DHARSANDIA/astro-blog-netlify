@@ -141,6 +141,7 @@
 
 a {
   text-decoration: none;
+  
 }
 
 li {
@@ -150,6 +151,7 @@ li {
 img,
 button {
   display: block;
+  
 }
 
 a,
@@ -181,14 +183,14 @@ html {
  */
 
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 15px;
 }
 
 
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 20px;
-  border: 4px solid;
+  border: 4px solid white;
 }
 
 .light-theme::-webkit-scrollbar-thumb {
@@ -439,9 +441,15 @@ header .btn-group {
 
 .nav-item
 {
-  color: aqua;
+  color: black;
 }
 
+.ReadLink
+{
+  background-color: var(--action-primary);
+  padding: 0.25rem 1rem; 
+  border-radius: 5px;
+}
 
 
 /*-----------------------------------*\ 
@@ -542,7 +550,7 @@ small {
 }
 
 .blog-topic {
-  background: var(--action-secondary);
+  background: var(--action-primary);
   color: var(--foreground-secondary);
   font-weight: 600;
   padding: 0.25rem 1rem;
@@ -624,6 +632,7 @@ small {
 
 
 
+
 /*-----------------------------------*\ 
   #ASIDE
 \*-----------------------------------*/
@@ -640,6 +649,9 @@ small {
 
 footer {
   background: var(--background-primary);
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .copyright {
