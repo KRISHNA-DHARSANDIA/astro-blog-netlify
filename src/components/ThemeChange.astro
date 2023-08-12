@@ -23,19 +23,21 @@
     document.documentElement.setAttribute("data-theme", currentTheme);
     themeBtn.classList.add(currentTheme);
     // If the current theme is dark, check the theme toggle
-    if (currentTheme === "dark") {
-      themeToggle.checked = true;
-    }
+    
   }
 
   // Function that will switch the theme based on the if the theme toggle is checked or not
-  function switchTheme(e) {
-    if (e.target.checked) {
+  function switchTheme(e) 
+  {
+    if (e.target.checked) 
+    {
       document.documentElement.setAttribute("data-theme", "dark");
       themeBtn.classList.remove("light");
       themeBtn.classList.add("dark");
       localStorage.setItem("theme", "dark");
-    } else {
+    }
+     else 
+    {
       document.documentElement.setAttribute("data-theme", "light");
       themeBtn.classList.remove("dark");
       themeBtn.classList.add("light");
